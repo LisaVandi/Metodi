@@ -28,7 +28,7 @@ def InterpL(x, y, xx):
      m=xx.size
      L=np.zeros((m,n))
      for j in range(n):
-        p = plagr(x, y) #to do
+        p = plagr(x, j) #to do
         L[:,j] = np.polyval(p, xx) #to do: valuta il polinomio di Lagrange nei punti xx
     
      return L@y
