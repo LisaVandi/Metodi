@@ -51,7 +51,7 @@ def qrLS(A,b):
     Q,R=spLin.qr(A)
 
     h = Q.T @ b #to do
-    x,flag=SolveTriangular.Usolve(R[0:n], h[0:n]) #to do
+    x,flag=SolveTriangular.Usolve(R[0:n, 0:n], h[0:n]) #to do
 
     residuo=np.linalg.norm(h[n:])**2
     return x,residuo
