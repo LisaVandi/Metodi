@@ -32,8 +32,8 @@ def eqnorm(A,b):
     L = spLin.cholesky(G, lower=True) # to do: per metodo di Cholesky
     U = L.T
      
-    z = SolveTriangular.Lsolve(L, f) # to do
-    x = SolveTriangular.Usolve(U, x) # to do
+    z, flag = SolveTriangular.Lsolve(L, f) # to do
+    x, flag = SolveTriangular.Usolve(U, z) # to do
     
     return x
     
